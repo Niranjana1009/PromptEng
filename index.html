@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Full Website</title>
+</head>
+<body class="bg-white">
+
+  <!-- NAVBAR -->
+  <nav class="w-full sticky top-0 z-50 bg-white shadow-sm">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#" class="text-2xl font-semibold text-gray-800">BrandName</a>
+
+      <div class="hidden md:flex space-x-8">
+        <a href="#" class="text-gray-700 hover:text-gray-900">Home</a>
+        <a href="#" class="text-gray-700 hover:text-gray-900">Services</a>
+        <a href="#" class="text-gray-700 hover:text-gray-900">About</a>
+        <a href="#" class="text-gray-700 hover:text-gray-900">Contact</a>
+      </div>
+
+      <button id="menuBtn" class="md:hidden focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+
+    <div id="mobileMenu" class="md:hidden hidden px-6 pb-4">
+      <a href="#" class="block py-2 text-gray-700 hover:text-gray-900">Home</a>
+      <a href="#" class="block py-2 text-gray-700 hover:text-gray-900">Services</a>
+      <a href="#" class="block py-2 text-gray-700 hover:text-gray-900">About</a>
+      <a href="#" class="block py-2 text-gray-700 hover:text-gray-900">Contact</a>
+    </div>
+
+    <script>
+      const menuBtn = document.getElementById('menuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    </script>
+  </nav>
+
+  <!-- HERO -->
+  <section class="w-full bg-white">
+    <div class="max-w-7xl mx-auto px-6 py-20 flex flex-col md:flex-row items-center gap-12">
+      <div class="flex-1">
+        <h1 class="text-4xl md:text-6xl font-bold text-gray-800 leading-tight">
+          Build Stunning Websites Effortlessly
+        </h1>
+        <p class="mt-6 text-lg text-gray-600 max-w-xl">
+          Create modern, responsive, and visually captivating web experiences with clean, structured
+          components designed for speed and clarity. Perfect for startups, creators, and businesses.
+        </p>
+        <button class="mt-8 px-8 py-4 bg-gray-800 text-white rounded-xl text-lg font-medium hover:bg-gray-900 transition">
+          Get Started
+        </button>
+      </div>
+
+      <div class="flex-1">
+        <img 
+          src="https://images.unsplash.com/photo-1505685296765-3a2736de412f" 
+          alt="Hero Illustration" 
+          class="w-full h-auto rounded-2xl shadow-md object-cover"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="w-full bg-white py-20">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Our Services</h2>
+      <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
+        We provide modern, scalable, and high-quality solutions to help businesses grow and innovate.
+      </p>
+
+      <div class="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-10">
+
+        <div class="p-8 bg-white rounded-2xl shadow-sm hover:shadow-md transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-gray-800 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+          </svg>
+          <h3 class="text-xl font-semibold text-gray-800">Fast Performance</h3>
+          <p class="mt-3 text-gray-600">Optimized code and blazing fast load times for smooth user experience.</p>
+        </div>
+
+        <div class="p-8 bg-white rounded-2xl shadow-sm hover:shadow-md transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-gray-800 mb-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7l6 6-6 6M21 7l-6 6 6 6"/>
+          </svg>
+          <h3 class="text-xl font-semibold text-gray-800">Responsive Design</h3>
+          <p class="mt-3 text-gray-600">Beautiful layouts that adapt perfectly to all screen sizes.</p>
+        </div>
+
+        <div class="p-8 bg-white rounded-2xl shadow-sm hover:shadow-md transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-gray-800 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c.87 0 1.57-.72 1.57-1.6C13.57 4.72 12 4 12 4s-1.57.72-1.57 2.4C10.43 7.28 11.13 8 12 8zM5 21h14M5 21l1.38-6.03A4 4 0 0110.3 12h3.4a4 4 0 013.92 2.97L19 21M5 21h14"/>
+          </svg>
+          <h3 class="text-xl font-semibold text-gray-800">User-Centered UI/UX</h3>
+          <p class="mt-3 text-gray-600">Thoughtfully crafted interfaces that enhance engagement and clarity.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM -->
+  <section class="w-full bg-white py-20">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-14 items-start">
+
+      <div>
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Get in Touch</h2>
+        <p class="mt-4 text-gray-600 max-w-md">
+          Have questions, project ideas, or want to collaborate? Fill out the form and our team will get back to you shortly.
+        </p>
+      </div>
+
+      <div class="bg-white shadow-sm rounded-2xl p-8">
+        <form class="space-y-6">
+
+          <div>
+            <label class="block text-gray-700 font-medium mb-2">Name</label>
+            <input 
+              type="text" 
+              required 
+              class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-gray-800 focus:outline-none"
+              placeholder="Enter your name"
+            />
+          </div>
+
+          <div>
+            <label class="block text-gray-700 font-medium mb-2">Email</label>
+            <input 
+              type="email" 
+              required 
+              class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-gray-800 focus:outline-none"
+              placeholder="Enter your email"
+            />
+          </div>
+
+          <div>
+            <label class="block text-gray-700 font-medium mb-2">Message</label>
+            <textarea 
+              required 
+              rows="4"
+              class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-gray-800 focus:outline-none"
+              placeholder="Write your message"
+            ></textarea>
+          </div>
+
+          <button 
+            type="submit" 
+            class="w-full md:w-auto px-8 py-4 bg-gray-800 text-white rounded-xl font-medium hover:bg-gray-900 transition"
+          >
+            Send Message
+          </button>
+
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="w-full bg-gray-900 text-gray-300 py-20">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+
+      <div>
+        <h3 class="text-xl font-semibold text-white">BrandName</h3>
+        <p class="mt-4 text-gray-400">
+          Building modern, responsive, and user-friendly digital experiences.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="text-lg font-semibold text-white">Quick Links</h4>
+        <ul class="mt-4 space-y-3">
+          <li><a href="#" class="hover:text-white">Home</a></li>
+          <li><a href="#" class="hover:text-white">Services</a></li>
+          <li><a href="#" class="hover:text-white">About Us</a></li>
+          <li><a href="#" class="hover:text-white">Blog</a></li>
+          <li><a href="#" class="hover:text-white">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-lg font-semibold text-white">Resources</h4>
+        <ul class="mt-4 space-y-3">
+          <li><a href="#" class="hover:text-white">Documentation</a></li>
+          <li><a href="#" class="hover:text-white">Support</a></li>
+          <li><a href="#" class="hover:text-white">API Reference</a></li>
+          <li><a href="#" class="hover:text-white">Community</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-lg font-semibold text-white">Follow Us</h4>
+        <div class="mt-6 flex space-x-6">
+          <a href="#" class="hover:text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M22.46 6c-.77.35-1.6.58-2.46.69a4.16 4.16 0 001.82-2.3 8.27 8.27 0 01-2.63 1.03A4.13 4.13 0 0016.11 4c-2.27 0-4.11 1.87-4.11 4.18 0 .33.03.65.1.96a11.74 11.74 0 01-8.55-4.4 4.23 4.23 0 00-.55 2.1A4.18 4.18 0 004.1 10a4.07 4.07 0 01-1.86-.52v.05c0 2 1.4 3.67 3.27 4.04a4.1 4.1 0 01-1.85.07c.52 1.66 2.04 2.87 3.85 2.91A8.29 8.29 0 013 18.58 11.67 11.67 0 009.29 20c7.55 0 11.68-6.41 11.68-11.97v-.54A8.54 8.54 0 0022.46 6z"/>
+            </svg>
+          </a>
+          <a href="#" class="hover:text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2.04c-5.51 0-9.96 4.45-9.96 9.96 0 4.41 2.87 8.14 6.84 9.46.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.15-1.1-1.46-1.1-1.46-.9-.63.07-.62.07-.62 1 .07 1.53 1.04 1.53 1.04.89 1.56 2.34 1.11 2.91.85.09-.65.35-1.11.63-1.37-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.67-.1-.25-.45-1.28.1-2.67 0 0 .84-.27 2.75 1.02a9.5 9.5 0 015 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.39.2 2.42.1 2.67.64.69 1.03 1.58 1.03 2.67 0 3.84-2.34 4.68-4.57 4.93.36.32.68.95.68 1.91v2.83c0 .27.18.58.69.48A9.98 9.98 0 0022 12c0-5.51-4.45-9.96-9.96-9.96z"/>
+            </svg>
+          </a>
+          <a href="#" class="hover:text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M19.75 3H4.25A1.25 1.25 0 003 4.25v15.5A1.25 1.25 0 004.25 21h15.5A1.25 1.25 0 0021 19.75V4.25A1.25 1.25 0 0019.75 3zM12 17.75A5.75 5.75 0 1117.75 12 5.76 5.76 0 0112 17.75zm6-10.5a1.25 1.25 0 11-1.25-1.25A1.26 1.26 0 0118 7.25zM12 9.5A2.5 2.5 0 109.5 12 2.5 2.5 0 0012 9.5z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="mt-16 border-t border-gray-700 pt-8 text-center text-gray-400">
+      © 2025 BrandName. All rights reserved.
+    </div>
+  </footer>
+
+</body>
+</html>
